@@ -60,11 +60,13 @@ int main()
 {
     setlocale(0, "");
 
+    // обьект 1 на конструкторе
     Human firstHuman(1, 1, "1");
     cout << endl << "значения по умолчанию" << endl;
     firstHuman.Print();
     cout << endl << "------------------------------" << endl;
 
+    //ввод параметров обьектов 1 и 2
     firstHuman.SetAge(22);
     firstHuman.SetName("sheglov pavel");
     firstHuman.SetWaight(93);
@@ -75,11 +77,19 @@ int main()
     secondHuman.SetName("saboba boba bibo");
     secondHuman.SetWaight(80);
 
+    //вывод результата
     firstHuman.Print();
     secondHuman.Print();
 
+    // выводы вводы по приколу
     int result = firstHuman.GetAge();
-    cout << endl << "1возраст: " << result;
+    cout << endl << "1 возраст: " << result;
+    cout << endl << "------------------------------" << endl;
+
+    cin >> result;
+    secondHuman.SetWaight(result);
+    cout << endl << "вес 2: " << secondHuman.GetWaight();
+    
 
     return 0;
 }
